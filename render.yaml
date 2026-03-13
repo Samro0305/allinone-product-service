@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: allinone-product-service
+    runtime: node
+    buildCommand: npm install
+    startCommand: node backend/app.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20
