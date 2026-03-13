@@ -1,21 +1,21 @@
 {
   "name": "allinone-product-service",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Product listing service",
+  "main": "backend/app.js",
   "scripts": {
-  "start": "node backend/app.js",
-  "postinstall": "npm rebuild sqlite3"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+    "start": "node backend/app.js",
+    "postinstall": "npm rebuild sqlite3"
+  },
+  "engines": {
+    "node": "20.x"
+  },
   "type": "commonjs",
   "dependencies": {
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",
     "express": "^5.2.1",
-    "sqlite3": "^6.0.1",
+    "sqlite3": "^5.1.7",
     "swagger-ui-express": "^5.0.1"
   }
 }
