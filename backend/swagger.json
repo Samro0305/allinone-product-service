@@ -1,0 +1,91 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AllInOne Product API",
+    "version": "1.0.0",
+    "description": "Product Listing API for SuperLabs Technical Task"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/api/products": {
+      "get": {
+        "summary": "Get all products",
+        "responses": {
+          "200": {
+            "description": "List of products"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new product",
+        "responses": {
+          "200": {
+            "description": "Product created"
+          }
+        }
+      }
+    },
+    "/api/products/search": {
+      "get": {
+        "summary": "Search products",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results"
+          }
+        }
+      }
+    },
+    "/api/products/{id}": {
+      "delete": {
+        "summary": "Delete product",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product deleted"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update product",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product updated"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Admin Product Panel</h1>
+
+<div class="form">
+
+<input id="name" placeholder="Product Name">
+
+<input id="description" placeholder="Description">
+
+<input id="price" placeholder="Price">
+
+<input id="sku" placeholder="SKU">
+
+<input id="availability" placeholder="Availability">
+
+<input id="image" placeholder="Image URL">
+
+<br>
+
+<button id="addBtn" onclick="addProduct()">Add Product</button>
+
+<button id="updateBtn" onclick="updateProduct()" style="display:none;">
+Update Product
+</button>
+
+</div>
+
+<h2>Product List</h2>
+
+<div id="productList"></div>
+
+<a href="index.html">
+<button>Search Products</button>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>

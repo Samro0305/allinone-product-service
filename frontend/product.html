@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Product Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Product Details</h1>
+
+<div id="product"></div>
+
+<br>
+
+<a href="index.html">
+<button>Back to Search</button>
+</a>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id");
+
+fetch("/api/products/"+id)
+.then(res=>res.json())
+.then(p=>{
+
+let html=`
+
+<div class="card">
+
+<img src="${p.image}" width="200">
+
+<h2>${p.name}</h2>
+
+<p>${p.description}</p>
+
+<p>Price: ${p.price}</p>
+
+<p>SKU: ${p.sku}</p>
+
+<p>Availability: ${p.availability}</p>
+
+</div>
+
+`;
+
+document.getElementById("product").innerHTML=html;
+
+});
+
+</script>
+
+</body>
+</html>
